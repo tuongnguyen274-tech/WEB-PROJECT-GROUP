@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Test Registration API</h2>
+    <script>
+        fetch('./api/register.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                username: "employer_test1",
+                password: "mypassword123",
+                role_id: 1
+            })
+        })
+        .then(response => response.json())
+        .then(data => alert(JSON.stringify(data)));
+    </script>
+</body>
+</html>
